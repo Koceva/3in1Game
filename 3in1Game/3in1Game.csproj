@@ -636,5 +636,17 @@
   <ItemGroup>
     <None Include="Resources\notebook.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cetvrta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prva.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\treta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vtora.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
