@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Serialization;
 
 namespace _3in1Game
 {
@@ -28,7 +30,6 @@ namespace _3in1Game
         public ThirdPartHard()
         {
             InitializeComponent();
-            this.Size = new Size(950, 700);
             words = new List<Words>();
             word = new Words();
          lblPoints.Text = FirstPartHard.points.ToString();
@@ -43,21 +44,39 @@ namespace _3in1Game
             timer.Tick += delegate
             {
                 time--;
-                if (time < 0)
+                if (time <= 0)
                 {
                     timer.Stop();
                     label8.Visible = true;
                     label9.Visible = false;
+                    lblText.Text = "00:00";
                     GameOver();
 
                 }
-                var ssTime = TimeSpan.FromSeconds(time);
-                lblText.Text = "00: " + time.ToString();
+               else if (time.ToString().Length == 1)
+                {
+                    lblText.Text = "00:0" + time.ToString();
+                }
+                else
+                {
+                    lblText.Text = "00: " + time.ToString();
+                }
             };
         }
         public void GameOver()
         {
             timer.Stop();
+
+            var player = new Player() { Poeni = FirstPartHard.points, Ime = Login.i.Ime, Mode = Login.i.Mode };
+            FirstPart._highScores.Add(player);
+
+            var serializer = new XmlSerializer(FirstPart._highScores.GetType(), "HighScores.Scores");
+            using (var writer = new StreamWriter("highscores.xml", false))
+            {
+                serializer.Serialize(writer.BaseStream, FirstPart._highScores);
+            }
+
+            bestPlayers();
             DialogResult dialog = MessageBox.Show("End of the game\n\nTotal points: " + FirstPartHard.points + " ", "Do you want to play again?", MessageBoxButtons.YesNoCancel);
             if (dialog == DialogResult.Yes)
             {
@@ -237,17 +256,7 @@ namespace _3in1Game
         public void bestPlayers()
         {
 
-            if (Login.igrachi.Contains(Login.i) && Login.i.Poeni == FirstPartHard.points)
-            {
-
-            }
-            else
-            {
-                Login.i.Poeni = FirstPartHard.points;
-
-                Login.igrachi.Add(Login.i);
-            }
-            Login.igrachi = Login.igrachi.OrderByDescending(x => x.Poeni).ToList();
+            Login.igrachi = FirstPart._highScores.OrderByDescending(x => x.Poeni).ToList();
 
             string s = "";
             int br = Login.igrachi.Count;
@@ -304,6 +313,26 @@ namespace _3in1Game
             {
                 Application.Exit();
             }
+
+        }
+
+        private void lblText_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
 
         }
     }

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace _3in1Game
 {
+    [Serializable()]
     public class Player
     {
 

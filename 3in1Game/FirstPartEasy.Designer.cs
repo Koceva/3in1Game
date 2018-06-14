@@ -63,7 +63,7 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(21, 40);
+            this.button1.Location = new System.Drawing.Point(38, 59);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(123, 40);
             this.button1.TabIndex = 53;
@@ -98,7 +98,7 @@
             this.lbwelcome.AutoSize = true;
             this.lbwelcome.Font = new System.Drawing.Font("Algerian", 16.2F, System.Drawing.FontStyle.Italic);
             this.lbwelcome.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.lbwelcome.Location = new System.Drawing.Point(290, 89);
+            this.lbwelcome.Location = new System.Drawing.Point(290, 124);
             this.lbwelcome.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbwelcome.Name = "lbwelcome";
             this.lbwelcome.Size = new System.Drawing.Size(94, 25);
@@ -111,7 +111,7 @@
             this.label1.BackColor = System.Drawing.SystemColors.Desktop;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(600, 89);
+            this.label1.Location = new System.Drawing.Point(595, 104);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 24);
@@ -209,7 +209,7 @@
             // label2
             // 
             this.label2.Image = ((System.Drawing.Image)(resources.GetObject("label2.Image")));
-            this.label2.Location = new System.Drawing.Point(592, 22);
+            this.label2.Location = new System.Drawing.Point(587, 37);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 101);
             this.label2.TabIndex = 50;
@@ -233,7 +233,7 @@
             // 
             this.button3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.button3.Image = global::_3in1Game.Properties.Resources.Webp_net_resizeimage;
-            this.button3.Location = new System.Drawing.Point(164, 40);
+            this.button3.Location = new System.Drawing.Point(181, 59);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(48, 40);
             this.button3.TabIndex = 54;
@@ -246,7 +246,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(695, 617);
+            this.ClientSize = new System.Drawing.Size(734, 601);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
@@ -264,6 +264,7 @@
             this.Controls.Add(this.label2);
             this.Name = "FirstPartEasy";
             this.Text = "Memory";
+            this.Load += new System.EventHandler(this.FirstPartEasy_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();

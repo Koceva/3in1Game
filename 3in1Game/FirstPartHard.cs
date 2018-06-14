@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Serialization;
 
 namespace _3in1Game
 {
@@ -16,7 +18,7 @@ namespace _3in1Game
         bool allowClick = false;
         PictureBox firstGuess;
         Random r = new Random();
-        int time = 60;
+        int time = 70;
         SecondPartHard secondForm;
         public static int points;
 
@@ -32,7 +34,13 @@ namespace _3in1Game
             loginForm = new Login();
             lbwelcome.Text = "Welcome " + Login.i.Ime;
             lbwelcome.Visible = true;
-            this.Size = new Size(950, 700);
+            var serializer = new XmlSerializer(FirstPart._highScores.GetType(), "HighScores.Scores");
+            object obj;
+            using (var reader = new StreamReader("highscores.xml"))
+            {
+                obj = serializer.Deserialize(reader.BaseStream);
+            }
+            FirstPart._highScores = (List<Player>)obj;
         }
         private PictureBox[] pictureBoxes
         {
@@ -62,7 +70,7 @@ namespace _3in1Game
             }
             HideImages();
             setRandomImages();
-            time = 60;
+            time = 70;
 
             //timer1.Start();
         }
@@ -147,9 +155,13 @@ namespace _3in1Game
                 timer1.Stop();
                 MessageBox.Show("Out of time");
                 ResetImage();
+                label1.Text = "01:10";
                 timer1.Start();
             }
-            if (time.ToString().Length == 1)
+            else if (time - 60 >= 0) {
+                label1.Text = "01:0" +Convert.ToString(time-60);
+            }
+            else if (time.ToString().Length == 1)
             {
                 label1.Text = "00:0" + time.ToString();
             }
@@ -163,6 +175,7 @@ namespace _3in1Game
 
         private void button2_Click(object sender, EventArgs e)
         {
+            FirstPartHard.points *= 2;
             secondForm = new SecondPartHard();
             secondForm.Show();
             secondForm.Location = this.Location;
@@ -191,6 +204,5 @@ namespace _3in1Game
             button1.Visible = true;
             button3.Visible = false;
         }
-
-         }
+    }
 }

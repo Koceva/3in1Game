@@ -25,7 +25,6 @@ namespace _3in1Game
         public SecondPartHard()
         {
             InitializeComponent();
-            this.Size = new Size(950, 700);
             isHit = false;
             lblPoints2.Text = FirstPartHard.points.ToString();
             correct.Add("Angelina Jolie");
@@ -201,6 +200,7 @@ namespace _3in1Game
                         lblPoints2.Text = FirstPartHard.points.ToString();
                         //Shuffle();
                         label8.Visible = true;
+                        button1.Enabled = false;
                         button2.Enabled = true;
                     }
                 }
@@ -227,7 +227,7 @@ namespace _3in1Game
                 Hit();
                 button1.Enabled = false;
                 button2.Enabled = true;
-                groupBox1.Visible = true;
+                groupBox1.Visible = false;
             }
             else
             {

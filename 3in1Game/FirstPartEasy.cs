@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Serialization;
 
 namespace _3in1Game
 {
@@ -33,7 +35,13 @@ namespace _3in1Game
             loginForm = new Login();
             lbwelcome.Text = "Welcome " + Login.i.Ime;
             lbwelcome.Visible = true;
-            this.Size = new Size(950, 700);
+            var serializer = new XmlSerializer(FirstPart._highScores.GetType(), "HighScores.Scores");
+            object obj;
+            using (var reader = new StreamReader("highscores.xml"))
+            {
+                obj = serializer.Deserialize(reader.BaseStream);
+            }
+            FirstPart._highScores = (List<Player>)obj;
 
         }
 
@@ -150,7 +158,7 @@ namespace _3in1Game
                 ResetImage();
                 timer1.Start();
             }
-            if (time.ToString().Length == 1)
+            else if (time.ToString().Length == 1)
             {
                 label1.Text = "00:0" + time.ToString();
             }
@@ -188,6 +196,11 @@ namespace _3in1Game
             timer1.Stop();
             button1.Visible = true;
             button3.Visible = false;
+        }
+
+        private void FirstPartEasy_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

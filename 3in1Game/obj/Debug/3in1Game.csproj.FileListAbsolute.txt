@@ -74,3 +74,22 @@ C:\Users\User\Desktop\New folder\3in1Game\3in1Game\obj\Debug\3in1Game.csproj.Gen
 C:\Users\User\Desktop\New folder\3in1Game\3in1Game\obj\Debug\3in1Game.csproj.CoreCompileInputs.cache
 C:\Users\User\Desktop\New folder\3in1Game\3in1Game\obj\Debug\3in1Game.exe
 C:\Users\User\Desktop\New folder\3in1Game\3in1Game\obj\Debug\3in1Game.pdb
+C:\Users\Aleksandar\Desktop\VP\7.serilizacija\3in1Game\3in1Game\bin\Debug\3in1Game.exe.config
+C:\Users\Aleksandar\Desktop\VP\7.serilizacija\3in1Game\3in1Game\bin\Debug\3in1Game.exe
+C:\Users\Aleksandar\Desktop\VP\7.serilizacija\3in1Game\3in1Game\bin\Debug\3in1Game.pdb
+C:\Users\Aleksandar\Desktop\VP\7.serilizacija\3in1Game\3in1Game\obj\Debug\3in1Game.csprojResolveAssemblyReference.cache
+C:\Users\Aleksandar\Desktop\VP\7.serilizacija\3in1Game\3in1Game\obj\Debug\_3in1Game.FirstPart.resources
+C:\Users\Aleksandar\Desktop\VP\7.serilizacija\3in1Game\3in1Game\obj\Debug\_3in1Game.FirstPartEasy.resources
+C:\Users\Aleksandar\Desktop\VP\7.serilizacija\3in1Game\3in1Game\obj\Debug\_3in1Game.FirstPartHard.resources
+C:\Users\Aleksandar\Desktop\VP\7.serilizacija\3in1Game\3in1Game\obj\Debug\_3in1Game.Login.resources
+C:\Users\Aleksandar\Desktop\VP\7.serilizacija\3in1Game\3in1Game\obj\Debug\_3in1Game.Properties.Resources.resources
+C:\Users\Aleksandar\Desktop\VP\7.serilizacija\3in1Game\3in1Game\obj\Debug\_3in1Game.SecondPart.resources
+C:\Users\Aleksandar\Desktop\VP\7.serilizacija\3in1Game\3in1Game\obj\Debug\_3in1Game.SecondPartEasy.resources
+C:\Users\Aleksandar\Desktop\VP\7.serilizacija\3in1Game\3in1Game\obj\Debug\_3in1Game.SecondPartHard.resources
+C:\Users\Aleksandar\Desktop\VP\7.serilizacija\3in1Game\3in1Game\obj\Debug\_3in1Game.ThirdPart.resources
+C:\Users\Aleksandar\Desktop\VP\7.serilizacija\3in1Game\3in1Game\obj\Debug\_3in1Game.ThirdPartEasy.resources
+C:\Users\Aleksandar\Desktop\VP\7.serilizacija\3in1Game\3in1Game\obj\Debug\_3in1Game.ThirdPartHard.resources
+C:\Users\Aleksandar\Desktop\VP\7.serilizacija\3in1Game\3in1Game\obj\Debug\3in1Game.csproj.GenerateResource.Cache
+C:\Users\Aleksandar\Desktop\VP\7.serilizacija\3in1Game\3in1Game\obj\Debug\3in1Game.csproj.CoreCompileInputs.cache
+C:\Users\Aleksandar\Desktop\VP\7.serilizacija\3in1Game\3in1Game\obj\Debug\3in1Game.exe
+C:\Users\Aleksandar\Desktop\VP\7.serilizacija\3in1Game\3in1Game\obj\Debug\3in1Game.pdb

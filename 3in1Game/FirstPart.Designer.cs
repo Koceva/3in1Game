@@ -92,7 +92,7 @@
             this.label1.BackColor = System.Drawing.SystemColors.Desktop;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(605, 91);
+            this.label1.Location = new System.Drawing.Point(631, 93);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 24);
@@ -328,7 +328,7 @@
             // label2
             // 
             this.label2.Image = ((System.Drawing.Image)(resources.GetObject("label2.Image")));
-            this.label2.Location = new System.Drawing.Point(597, 24);
+            this.label2.Location = new System.Drawing.Point(623, 26);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 101);
             this.label2.TabIndex = 27;
@@ -350,7 +350,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(695, 617);
+            this.ClientSize = new System.Drawing.Size(734, 601);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);

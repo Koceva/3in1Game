@@ -178,6 +178,7 @@ namespace _3in1Game
                         lblPoints2.Text = FirstPart.points.ToString();
                         //Shuffle();
                         label8.Visible = true;
+                        button1.Enabled = false;
                         button2.Enabled = true;
                     }
                 }
@@ -204,7 +205,7 @@ namespace _3in1Game
                 Hit();
                 button1.Enabled = false;
                 button2.Enabled = true;
-                groupBox1.Visible = true;
+                groupBox1.Visible = false;
             }
             else
             {
